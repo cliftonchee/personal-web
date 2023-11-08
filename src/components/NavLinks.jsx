@@ -33,6 +33,19 @@ const ListItem = styled.li`
     color: transparent;
     -webkit-text-stroke: 1px white;
     position: relative;
+    animation: fadeIn ${(props) => props.delay} ease forwards;
+    opacity: 0; /* Initially set opacity to 0 */
+
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px); /* Optional: Move the element right by 50 pixels */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
 
     &:hover::after {
         content: "${(props) => props.num}"; /* Displayed when hovering */
@@ -66,9 +79,9 @@ const ListItem = styled.li`
 `
 
 const data = [
-    {text: "About", num: "01."},
-    {text: "Portfolio", num: "02."},
-    {text: "Contact", num: "03."}
+    {text: "About", num: "01.", delay: "1s"},
+    {text: "Portfolio", num: "02.", delay: "1.75s"},
+    {text: "Contact", num: "03.", delay: "2.5s"}
 ];
 
 const handleClickScroll = (id) => {
@@ -86,7 +99,7 @@ const NavLinks = () => {
             <Links>
                 <List>
                     {data.map((item) => (
-                        <ListItem key={item.text} text={item.text} num={item.num} onClick={() => handleClickScroll(item.text)}>
+                        <ListItem key={item.text} text={item.text} num={item.num} delay={item.delay} onClick={() => handleClickScroll(item.text)}>
                             {item.num}<br/>{item.text}
                         </ListItem>
                     ))}

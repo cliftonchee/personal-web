@@ -21,7 +21,7 @@ const Container = styled.div`
 const Left = styled.div`
   flex: 1;
   height: 100vh;
-  display: grid;
+  /* display: grid; */
   position: relative;
   /* background-color: #885fff; */
   @media only screen and (max-width: 768px) {
@@ -30,8 +30,8 @@ const Left = styled.div`
 `;
 
 const LogoContainer = styled.div`
-    margin-left: 60px;
-    margin-top: 60px;
+    margin-left: 8vh;
+    margin-top: 8vh;
     position: relative;
 `
 
@@ -43,11 +43,14 @@ const Logo = styled.img`
 `
 
 const ProjectContainer = styled.div`
-  margin-top: 100px;
+  margin-top: 26vh;
+  height: 74vh;
+  width: 74vh;
+  overflow: hidden;
   border-top-right-radius: 80px;
-  border: solid;
+  /* border: solid; */
   /* display: flex; */
-`;
+`
 
 const Right = styled.div`
   flex: 1;
@@ -58,7 +61,7 @@ const Right = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-`;
+`
 
 const PortfolioContainer = styled.div`
   position: relative;
@@ -67,7 +70,7 @@ const PortfolioContainer = styled.div`
 `
 
 const Line = styled.hr`
-  height: 1px;
+  height: 0.5px;
   background-color: #c6c8cf;
   border-radius: 20px;
 `

@@ -42,6 +42,20 @@ const Info = styled.div`
     margin-left: 44.5%;
     margin-top: 150px;
     text-align: center;
+
+    animation: fadeIn 2s ease forwards;
+    opacity: 0; /* Initially set opacity to 0 */
+
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px); /* Optional: Move the element right by 50 pixels */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
 `
 
 const Nav = styled.div`
