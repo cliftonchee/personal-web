@@ -25,7 +25,7 @@ const Left = styled.div`
   position: relative;
   /* background-color: #885fff; */
   @media only screen and (max-width: 768px) {
-    justify-content: center;
+    display: none;
   }
 `;
 
@@ -59,7 +59,7 @@ const Right = styled.div`
   padding: 200px 0px 200px 0px;
 
   @media only screen and (max-width: 768px) {
-    display: none;
+    padding: 100px;
   }
 `
 
@@ -67,6 +67,10 @@ const PortfolioContainer = styled.div`
   position: relative;
   display: grid;
   padding: 0px 150px 0px 50px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0px;
+  }
 `
 
 const Line = styled.hr`
@@ -80,6 +84,10 @@ const TextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    margin: 20px 0px;
+  }
 `;
 
 const Title = styled.p`
@@ -87,6 +95,10 @@ const Title = styled.p`
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px white;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 50px;
+  }
 `;
 
 const Number = styled.text`

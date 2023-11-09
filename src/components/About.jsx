@@ -23,6 +23,8 @@ const Left = styled.div`
   margin-left: 50px;
   @media only screen and (max-width: 768px) {
     justify-content: center;
+    margin-left: 0px;
+    margin-right: 50px;
   }
 `;
 
@@ -41,6 +43,10 @@ const Logo = styled.img`
   margin-top: 90px;
   width: 80px;
   height: 80px;
+
+  @media only screen and (max-width: 768px) {
+    margin: 20px;
+  }
 `
 
 const Title = styled.p`
@@ -57,6 +63,10 @@ const Desc = styled.p`
   text-align: justify;
   color: #c6c8cf;
   margin-right: 240px;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 70px;
+  }
 `;
 
 const Line = styled.hr`
@@ -64,6 +74,10 @@ const Line = styled.hr`
   height: 1px;
   background-color: #c6c8cf;
   border-radius: 20px;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 70px;
+  }
 `
 
 const Image = styled.img`
@@ -113,7 +127,7 @@ const About = () => {
     return (
         <Section id="About">
           <Container>
-          <Logo src="../../img/Chee_Logo.png" onClick={() => handleClickScroll("Intro")}></Logo>
+            <Logo src="../../img/Chee_Logo.png" onClick={() => handleClickScroll("Intro")}></Logo>
             <Left>
               <Title>ABOUT</Title>
               <Line></Line>

@@ -3,7 +3,6 @@ import { Canvas, useLoader } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import React, { useRef, useState, useEffect } from 'react'
-import * as THREE from 'three';
 import styled from 'styled-components'
 
 import StarSystem from './StarSystem'
@@ -12,9 +11,12 @@ import Logo from './Logo'
 
 const Section = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: #080d21;
   scroll-snap-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #c6c8cf;
 `
 
@@ -38,8 +40,6 @@ const Desc = styled.p`
 
 const Info = styled.div`
     position: absolute;
-    max-width: 100%;
-    margin-left: 44.5%;
     margin-top: 150px;
     text-align: center;
 
@@ -58,8 +58,17 @@ const Info = styled.div`
     }
 `
 
+const InfoContainer = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 8px;
+`
+
 const Nav = styled.div`
     position: relative;
+    display: flex;
+    align-items: center;
 `
 
 const Intro = () => {
@@ -87,13 +96,13 @@ const Intro = () => {
     return (
         <Section id="Intro">
             {/* Name & Desc */}
-            <Nav>
+            <InfoContainer>
                 <Info>
                     <Title>C L I F T O N</Title>
                     <Subtitle>C H E E</Subtitle>
                     <Desc>Budding Software Engineer</Desc>
                 </Info>
-            </Nav>
+            </InfoContainer>
             {/* Buttons */}
             <Nav>
                 <NavLinks/>

@@ -4,24 +4,23 @@ import styled from 'styled-components'
 const Container = styled.div`
     max-width: 100%;
     position: absolute;
-    margin-top: 350px;
-    margin-left: 230px;
+    margin-top: 60%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    overflow-x: hidden;
+    /* align-items: center; */
     z-index: 20;
-`
 
-const Links = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    @media only screen and (max-width: 768px) {
+        margin-top: 700px;
+    }
 `
 
 const List = styled.ul`
+    width: 100vw;
     display: flex;
-    gap: 300px;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 13%;
     list-style: none;
     flex-direction: row;
 `
@@ -96,15 +95,13 @@ const NavLinks = () => {
 
     return (
         <Container>
-            <Links>
-                <List>
-                    {data.map((item) => (
-                        <ListItem key={item.text} text={item.text} num={item.num} delay={item.delay} onClick={() => handleClickScroll(item.text)}>
-                            {item.num}<br/>{item.text}
-                        </ListItem>
-                    ))}
-                </List>
-            </Links>
+            <List>
+                {data.map((item) => (
+                    <ListItem key={item.text} text={item.text} num={item.num} delay={item.delay} onClick={() => handleClickScroll(item.text)}>
+                        {item.num}<br/>{item.text}
+                    </ListItem>
+                ))}
+            </List>
         </Container>
     )
 }
