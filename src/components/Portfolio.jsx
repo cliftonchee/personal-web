@@ -103,6 +103,10 @@ const Subtitle = styled.p`
   font-weight: 500;
   text-align: justify;
   color: #c6c8cf;
+
+  &:hover {
+    transform: scale(1.05) translateX(3px);
+  }
 `;
 
 const Subtext = styled.p`

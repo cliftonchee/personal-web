@@ -68,7 +68,7 @@ const Line = styled.hr`
 
 const Image = styled.img`
   width: 310px;
-  height: 550px;
+  height: 580px;
   border-bottom-left-radius: 50px;
 `
 
@@ -83,6 +83,11 @@ const Button = styled.button`
   font-weight: 200;
   color: #e9eaee;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
 `
 
 const DownArrow = styled.img`
@@ -99,6 +104,10 @@ const handleClickScroll = (id) => {
   }
 };
 
+const openCV = () => {
+  window.open("../../cv/resume.pdf", "_blank");
+}
+
 
 const About = () => {
     return (
@@ -112,7 +121,7 @@ const About = () => {
                 Passionate about music, hiking, cooking and mental health. I enjoy taking in the small things in life. Always curious to
                 push myself to learn new technologies!
               </Desc>
-              <Button onClick={() => handleClickScroll("Portfolio")}>
+              <Button id="viewCVButton" onClick={() => openCV()}>
                 <DownArrow src="../../img/white_down_arrow.png"></DownArrow>
                 curriculum vitae
               </Button>

@@ -76,7 +76,7 @@ const Intro = () => {
       // Update the intensity of the point lights over time
       const interval = setInterval(() => {
         // Calculate intensity using sine function for smooth oscillation
-        const newIntensity = 75 * (Math.sin(Date.now() * 0.001) + 1); // Intensity oscillates between 0 and 150
+        const newIntensity = 50 + 75 * (Math.sin(Date.now() * 0.001) + 1); // Intensity oscillates between 50 and 200
         setIntensity(newIntensity);
       }, 16); // Update intensity approximately every frame (60 frames per second)
   
@@ -102,7 +102,7 @@ const Intro = () => {
             <Canvas camera={{ position: [0, 10, 50]}}>
                 <OrbitControls enabled={false} enableZoom={false}/>
                 {/* Logo */}
-                <Logo pos={[-0.07, 12.5, 43]}></Logo>
+                <Logo pos={[-0.05, 12.5, 43]}></Logo>
                 {/* Rocks */}
                 <primitive
                     object={gltfLeftRock.scene}
