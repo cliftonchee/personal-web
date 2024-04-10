@@ -4,6 +4,8 @@ import GoogleDSC from './GoogleDSC'
 import Polaris from './Polaris'
 import Hearhtfelt from './Hearhtfelt'
 import DigitalSpacee from './DigitalSpacee'
+import MVPStudio from './MVPStudio'
+import BigHeartBros from './BigHeartBros'
 
 const Section = styled.div`
   height: 100vh;
@@ -56,7 +58,7 @@ const Right = styled.div`
   flex: 1;
   position: relative;
   display: grid;
-  padding: 200px 0px 200px 0px;
+  padding: 200px 0px 100px 0px;
 
   @media only screen and (max-width: 768px) {
     padding: 100px;
@@ -153,8 +155,12 @@ const Portfolio = () => {
                   <Polaris />
                 ) : work === "Hearhtfelt" ? (
                   <Hearhtfelt />
-                ) : (
+                ) : work === "DigitalSpacee" ? (
                   <DigitalSpacee />
+                ) : work === "MVPStudio" ? (
+                  <MVPStudio/>
+                ) : (
+                  <BigHeartBros/>
                 )} 
               </ProjectContainer>
             </Left>
@@ -162,7 +168,17 @@ const Portfolio = () => {
               <PortfolioContainer>
                 <TextContainer>
                   <Title>P O R T F O L I O</Title>
-                  <Number>4</Number>
+                  <Number>6</Number>
+                </TextContainer>
+                <Line/>
+                <TextContainer onClick={() => setWork("BigHeartBros")}>
+                  <Subtitle>Big Heart Bros</Subtitle>
+                  <Subtext>Finalist</Subtext>
+                </TextContainer>
+                <Line/>
+                <TextContainer onClick={() => setWork("MVPStudio")}>
+                  <Subtitle>MVP Studio</Subtitle>
+                  <Subtext>Full Stack Developer</Subtext>
                 </TextContainer>
                 <Line/>
                 <TextContainer onClick={() => setWork("GoogleDSC")}>
