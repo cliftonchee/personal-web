@@ -132,7 +132,7 @@ const About = () => {
               <Title>ABOUT</Title>
               <Line></Line>
               <Desc>Hi! I'm Clifton. Currently an undergrad at NUS Computer Science! Areas of interest would be Software Engineering and AI.
-                Passionate about music, hiking, cooking and mental health. I enjoy taking in the small things in life. Always curious to
+                Passionate about music (recently vinyl!), travelling, cooking and mental health. I enjoy taking in the small things in life. Always curious to
                 push myself to learn new technologies!
               </Desc>
               <Button id="viewCVButton" onClick={() => openCV()}>

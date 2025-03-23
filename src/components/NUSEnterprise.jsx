@@ -36,7 +36,7 @@ const Time = styled.p`
     color: transparent;
 `
 
-const MVPStudio = () => {
+const NUSEnterprise = () => {
     return (
         <Section>
             {/* <Time>Aug '23 - Current</Time> */}
@@ -45,4 +45,4 @@ const MVPStudio = () => {
     )
 }
 
-export default MVPStudio
+export default NUSEnterprise

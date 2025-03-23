@@ -4,7 +4,7 @@ import GoogleDSC from './GoogleDSC'
 import Polaris from './Polaris'
 import Hearhtfelt from './Hearhtfelt'
 import DigitalSpacee from './DigitalSpacee'
-import MVPStudio from './MVPStudio'
+import NUSEnterprise from './NUSEnterprise'
 import BigHeartBros from './BigHeartBros'
 
 const Section = styled.div`
@@ -157,8 +157,8 @@ const Portfolio = () => {
                   <Hearhtfelt />
                 ) : work === "DigitalSpacee" ? (
                   <DigitalSpacee />
-                ) : work === "MVPStudio" ? (
-                  <MVPStudio/>
+                ) : work === "NUSEnterprise" ? (
+                  <NUSEnterprise/>
                 ) : (
                   <BigHeartBros/>
                 )} 
@@ -176,9 +176,9 @@ const Portfolio = () => {
                   <Subtext>Finalist</Subtext>
                 </TextContainer>
                 <Line/>
-                <TextContainer onClick={() => setWork("MVPStudio")}>
-                  <Subtitle>MVP Studio</Subtitle>
-                  <Subtext>Full Stack Developer</Subtext>
+                <TextContainer onClick={() => setWork("NUSEnterprise")}>
+                  <Subtitle>NUS Enterprise</Subtitle>
+                  <Subtext>Full Stack Dev</Subtext>
                 </TextContainer>
                 <Line/>
                 <TextContainer onClick={() => setWork("GoogleDSC")}>
@@ -188,7 +188,7 @@ const Portfolio = () => {
                 <Line/>
                 <TextContainer onClick={() => setWork("Polaris")}>
                   <Subtitle>Polaris</Subtitle>
-                  <Subtext>Full Stack</Subtext>
+                  <Subtext>Full Stack Dev</Subtext>
                 </TextContainer>
                 <Line/>
                 <TextContainer onClick={() => setWork("Hearhtfelt")}>
